@@ -32,5 +32,26 @@ namespace LinqGUIApp
         {
 
         }
+
+        // 연동
+        private void button1_Click(object sender, EventArgs e)
+        {
+            productBindingSource.DataSource = products;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            productBindingSource.DataSource = from item in products
+                                              where item.Price >= 1500
+                                              orderby item.Price descending
+                                              select item;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            productBindingSource.DataSource = from item in products
+                                              orderby item.Name ascending
+                                              select item;
+        }
     }
 }
