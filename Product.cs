@@ -9,6 +9,6 @@ namespace LinqGUIApp
     internal class Product
     {
         public string Name { get; set; }
-        public string Price { get; set; }
+        public int Price { get; set; }
     }
 }
